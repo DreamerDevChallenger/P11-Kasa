@@ -1,0 +1,31 @@
+@import "./App.scss";
+header {
+  padding: 1.5em 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      li {
+        margin: 1em;
+        font-size: 20px;
+        color: $First-color;
+        text-align: center;
+        &:visited,
+        &:hover {
+          color: $First-color;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  img {
+    width: 170px;
+  }
+}
