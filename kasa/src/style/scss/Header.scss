@@ -1,22 +1,25 @@
-@import "./App.scss";
+@import "./Color.scss";
 header {
-  padding: 1.5em 80px;
+  padding: 1em 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   nav {
+    width: 200px;
+    margin-left: 10px;
     ul {
+      padding: 0;
       list-style: none;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-end;
       li {
-        margin: 1em;
         font-size: 20px;
         color: $First-color;
-        text-align: center;
+        margin: auto;
+
         &:visited,
         &:hover {
           color: $First-color;
@@ -25,7 +28,24 @@ header {
       }
     }
   }
-  img {
-    width: 170px;
+  svg {
+    width: 170px !important;
+    fill: blue;
+  }
+}
+@media screen and (max-width: 450.9px) {
+  header {
+    padding: 25px 20px;
+    nav {
+      width: 150px;
+      ul {
+        li {
+          font-size: 15px;
+        }
+      }
+    }
+    svg {
+      width: 120px !important;
+    }
   }
 }

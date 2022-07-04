@@ -1,5 +1,10 @@
+import NotFound from "../components/NotFound";
 function ErrorPage() {
-  return <div>404 not found</div>;
+  return (
+    <section>
+      <NotFound></NotFound>
+    </section>
+  );
 }
 
 export default ErrorPage;
