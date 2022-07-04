@@ -1,0 +1,54 @@
+@import "./Color.scss";
+.dropdown-section {
+  padding: 50px 100px;
+  .dropdown-container {
+    margin-bottom: 30px;
+
+    p {
+      margin: 0;
+      font-size: 24px;
+    }
+    .dropdown-header {
+      position: relative;
+      width: 100%;
+      background-color: $First-color;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 0.5em;
+      z-index: 1;
+      font-size: 19px;
+      .toggle-icon {
+        cursor: pointer;
+        transition: 0.5s;
+      }
+      .open-icon {
+        transform: rotate(-180deg);
+        -webkit-transform: rotate(-180deg);
+        transition: 0.5s;
+      }
+    }
+    .dropdown-contain {
+      color: $First-color;
+      position: relative;
+      width: 100%;
+      margin-top: -10px;
+      z-index: -1;
+      border-radius: 5px;
+      padding: 2em 3em;
+      background-color: #f6f6f6;
+      overflow: hidden;
+    }
+    .close-dropdown {
+      display: none;
+      height: 0;
+    }
+    .open-dropdown {
+      height: auto;
+      display: block !important;
+    }
+  }
+}
