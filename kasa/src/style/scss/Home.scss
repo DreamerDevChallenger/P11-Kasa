@@ -1,0 +1,19 @@
+.home-container {
+  padding: 40px 50px;
+  .rent-section {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 0px;
+    border-radius: 1em;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f6f6;
+    color: white;
+  }
+}
+@media screen and (max-width: 450.9px) {
+  .about-container {
+    padding: 40px 10px;
+  }
+}

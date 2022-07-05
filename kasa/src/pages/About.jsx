@@ -1,4 +1,4 @@
-import BackgroundAbout from "../components/BackgroundAboutPicture";
+import BannerAbout from "../components/BannerAbout";
 import DropdownAbout from "../components/DropdownAbout";
 import dataAbout from "../data/aboutData.json";
 import "../style/css/About.css";
@@ -6,9 +6,9 @@ import "../style/css/About.css";
 function About() {
   const data = dataAbout;
   return (
-    <section className="about-container">
-      <BackgroundAbout></BackgroundAbout>
-      <div className="dropdown-section">
+    <main className="about-container">
+      <BannerAbout></BannerAbout>
+      <section className="dropdown-section">
         {data.map((about) => (
           <DropdownAbout
             title={about.title}
@@ -17,8 +17,8 @@ function About() {
             key={about.id}
           ></DropdownAbout>
         ))}
-      </div>
-    </section>
+      </section>
+    </main>
   );
 }
 export default About;

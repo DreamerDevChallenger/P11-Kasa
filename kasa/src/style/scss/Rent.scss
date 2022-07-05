@@ -1,0 +1,61 @@
+@import "./Color.scss";
+.rent-container {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  background-color: $First-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: auto;
+  justify-self: center;
+
+  width: 350px;
+  min-width: 200px;
+  height: 350px;
+  margin: 50px;
+  border-radius: 10px;
+
+  &:hover {
+    .rent-banner-container {
+      img {
+        height: 150%;
+      }
+    }
+  }
+  .rent-banner-container {
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+    img {
+      object-fit: cover;
+      mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 30%,
+        rgba(0, 0, 0, 0) 80%
+      );
+      height: 110%;
+      object-position: 50% 90%;
+      transition: 1.2s ease-in-out;
+    }
+  }
+  .rent-title {
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: auto;
+    display: inline;
+    text-align: start;
+    font-size: 20px;
+    z-index: 1;
+    transition: 0.7s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      text-shadow: 0px 1px 2px white;
+    }
+  }
+}

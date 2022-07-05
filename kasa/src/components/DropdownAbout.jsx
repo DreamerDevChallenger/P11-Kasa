@@ -1,8 +1,6 @@
 import "../style/css/Dropdown.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-
+import { ReactComponent as Icon } from "../assets/chevron-down-solid.svg";
 function DropdownAbout({ title, description, id }) {
   const [isOpen, setIsOpen] = useState(false);
   function handleTogle() {
@@ -12,11 +10,11 @@ function DropdownAbout({ title, description, id }) {
     <div className="dropdown-container" key={id}>
       <div className="dropdown-header">
         <p>{title}</p>
-        <FontAwesomeIcon
-          icon={faChevronDown}
+
+        <Icon
           className={isOpen ? "toggle-icon open-icon" : "toggle-icon "}
           onClick={handleTogle}
-        ></FontAwesomeIcon>
+        ></Icon>
       </div>
       <div
         className={

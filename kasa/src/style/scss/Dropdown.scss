@@ -3,7 +3,6 @@
   padding: 50px 100px;
   .dropdown-container {
     margin-bottom: 30px;
-
     p {
       margin: 0;
       font-size: 24px;
@@ -22,8 +21,13 @@
       z-index: 1;
       font-size: 19px;
       .toggle-icon {
+        width: 20px;
+        color: white;
         cursor: pointer;
         transition: 0.5s;
+        path {
+          fill: white;
+        }
       }
       .open-icon {
         transform: rotate(-180deg);
@@ -43,12 +47,25 @@
       overflow: hidden;
     }
     .close-dropdown {
-      display: none;
+      opacity: 0;
       height: 0;
+      padding: 0;
+      overflow: hidden;
+      transition: 1s;
     }
     .open-dropdown {
       height: auto;
-      display: block !important;
+      opacity: 1;
+      transition: 1s;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .dropdown-section {
+    padding: 50px 10px;
+    p {
+      margin: 0;
+      font-size: 17px !important;
     }
   }
 }
