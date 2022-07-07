@@ -1,0 +1,19 @@
+.user-container {
+  display: flex;
+
+  align-items: center;
+  justify-self: flex-end;
+  align-self: flex-end;
+  width: 180px;
+  order: 2;
+  .user-name {
+    margin: 5px;
+    text-align: end;
+    font-size: 18px;
+  }
+  .user-avatar {
+    border-radius: 100%;
+    margin: 5px;
+    height: 80px;
+  }
+}

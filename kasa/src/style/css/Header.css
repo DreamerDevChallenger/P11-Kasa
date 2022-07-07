@@ -31,6 +31,7 @@ header {
     header nav {
       width: 150px; }
       header nav ul li {
-        font-size: 15px; }
+        font-size: 15px;
+        margin-right: 0; }
     header svg {
       width: 120px !important; } }

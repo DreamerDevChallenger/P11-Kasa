@@ -1,0 +1,11 @@
+.information-name {
+  align-self: flex-start;
+  order: 1; }
+  .information-name .information-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 5px 0px; }
+  .information-name .information-location {
+    font-size: 16px;
+    font-weight: lighter;
+    margin: 5px 0px; }

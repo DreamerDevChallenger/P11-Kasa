@@ -1,0 +1,26 @@
+@import "./Color.scss";
+.rating-container {
+  position: relative;
+  width: 180px;
+  height: 30px;
+  order: 4;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-self: flex-end;
+  justify-content: flex-end;
+  z-index: 2;
+  &:hover .rating-number {
+    opacity: 1;
+  }
+  .rating-block {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .rated {
+    path {
+      fill: $First-color;
+    }
+  }
+}

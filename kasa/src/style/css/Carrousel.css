@@ -1,0 +1,17 @@
+.carrousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 350px;
+  border-radius: 1.5em; }
+  .carrousel-container .carrousel-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; }
+  .carrousel-container .carrousel-background {
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%; }

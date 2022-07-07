@@ -11,21 +11,24 @@
   min-width: 200px;
   height: 350px;
   margin: 50px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  box-shadow: 0;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2); }
   .rent-container:hover .rent-banner-container img {
-    height: 150%; }
+    height: 110%; }
   .rent-container .rent-banner-container {
     position: absolute;
-    height: 350px;
-    width: 350px;
+    height: 100%;
+    width: 100%;
     border-radius: 10px 10px 0px 0px;
     overflow: hidden; }
     .rent-container .rent-banner-container img {
       object-fit: cover;
-      mask-image: linear-gradient(to bottom, black 30%, rgba(0, 0, 0, 0) 80%);
-      height: 110%;
-      object-position: 50% 90%;
-      transition: 1.2s ease-in-out; }
+      mask-image: linear-gradient(to bottom, black 40%, rgba(0, 0, 0, 0) 80%);
+      height: 100%;
+      transition-delay: 0.2s;
+      transition-duration: 1.5s;
+      transition-timing-function: ea; }
   .rent-container .rent-title {
     margin-left: 1em;
     margin-right: 1em;
@@ -36,5 +39,13 @@
     z-index: 1;
     transition: 0.7s ease-in-out;
     cursor: pointer; }
+    .rent-container .rent-title a:hover {
+      text-decoration: none; }
     .rent-container .rent-title:hover {
-      text-shadow: 0px 1px 2px white; }
+      text-shadow: 0px 1px 3px #c8c8c8; }
+
+@media screen and (max-width: 450.9px) {
+  .rent-container {
+    width: 85%;
+    height: 300px;
+    margin: 20px; } }

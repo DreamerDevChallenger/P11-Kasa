@@ -1,0 +1,18 @@
+.information-container {
+  margin: 40px 0px;
+  .information-header {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 0px;
+  }
+  .information-section {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 5em;
+  }
+}

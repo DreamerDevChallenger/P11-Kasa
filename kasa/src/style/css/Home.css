@@ -12,5 +12,8 @@
     color: white; }
 
 @media screen and (max-width: 450.9px) {
-  .about-container {
-    padding: 40px 10px; } }
+  .home-container {
+    padding: 40px 10px; }
+    .home-container .rent-section {
+      background-color: inherit;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); } }

@@ -1,15 +1,16 @@
-import "../style/css/Dropdown.css";
 import { useState } from "react";
 import { ReactComponent as Icon } from "../assets/chevron-down-solid.svg";
-function DropdownAbout({ title, description, id }) {
+import "../style/css/Dropdown.css";
+
+function Description({ description }) {
   const [isOpen, setIsOpen] = useState(false);
   function handleTogle() {
     setIsOpen(!isOpen);
   }
   return (
-    <div className="dropdown-container" key={id}>
+    <div className="dropdown-container dropdown-information dropdown-description">
       <div className="dropdown-header">
-        <p>{title}</p>
+        <p>Description</p>
         <Icon
           className={isOpen ? "toggle-icon open-icon" : "toggle-icon "}
           onClick={handleTogle}
@@ -28,4 +29,4 @@ function DropdownAbout({ title, description, id }) {
   );
 }
 
-export default DropdownAbout;
+export default Description;

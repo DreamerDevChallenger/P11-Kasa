@@ -1,0 +1,16 @@
+.tag-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  justify-content: flex-start;
+  order: 3; }
+  .tag-container .tag-block {
+    padding: 0px 30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #ff6060;
+    border-radius: 20px;
+    color: white; }
+  .tag-container .tag-name {
+    margin: 10px; }
