@@ -1,4 +1,4 @@
-import data from "../data/data.json";
+import data from "../__mocks__/data.json";
 import RentItems from "./RentItems";
 import Aos from "aos";
 import "aos/dist/aos.css";

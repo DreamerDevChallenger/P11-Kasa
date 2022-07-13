@@ -1,6 +1,5 @@
 .information-name {
-  align-self: flex-start;
-  order: 1; }
+  margin-bottom: 10px; }
   .information-name .information-title {
     font-size: 30px;
     font-weight: bold;

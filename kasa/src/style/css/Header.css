@@ -1,37 +1,37 @@
-header {
+.header-container {
   padding: 1em 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center; }
-  header nav {
+  .header-container nav {
     width: 200px;
     margin-left: 10px; }
-    header nav ul {
+    .header-container nav ul {
       padding: 0;
       list-style: none;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-end; }
-      header nav ul li {
+      .header-container nav ul li {
         font-size: 20px;
         color: #ff6060;
         margin: auto; }
-        header nav ul li:visited, header nav ul li:hover {
+        .header-container nav ul li:visited, .header-container nav ul li:hover {
           color: #ff6060;
           text-decoration: underline; }
-  header svg {
+  .header-container svg {
     width: 170px !important;
     fill: blue; }
 
 @media screen and (max-width: 450.9px) {
-  header {
+  .header-container {
     padding: 25px 20px; }
-    header nav {
+    .header-container nav {
       width: 150px; }
-      header nav ul li {
+      .header-container nav ul li {
         font-size: 15px;
         margin-right: 0; }
-    header svg {
+    .header-container svg {
       width: 120px !important; } }

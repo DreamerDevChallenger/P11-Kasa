@@ -1,5 +1,6 @@
 import DropdownAbout from "./DropdownAbout";
-import dataAbout from "../data/aboutData.json";
+import dataAbout from "../__mocks__/aboutData.json";
+
 function DropdownAboutSection() {
   const data = dataAbout;
   return (

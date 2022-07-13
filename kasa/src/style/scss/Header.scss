@@ -1,6 +1,6 @@
 @import "./Color.scss";
 
-header {
+.header-container {
   padding: 1em 60px;
   display: flex;
   flex-direction: row;
@@ -35,7 +35,7 @@ header {
   }
 }
 @media screen and (max-width: 450.9px) {
-  header {
+  .header-container {
     padding: 25px 20px;
     nav {
       width: 150px;

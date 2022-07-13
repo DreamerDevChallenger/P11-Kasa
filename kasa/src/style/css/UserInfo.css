@@ -1,15 +1,18 @@
 .user-container {
   display: flex;
-  align-items: center;
-  justify-self: flex-end;
-  align-self: flex-end;
-  width: 180px;
-  order: 2; }
+  align-items: center; }
   .user-container .user-name {
     margin: 5px;
     text-align: end;
-    font-size: 18px; }
+    font-size: 18px;
+    display: flex; }
   .user-container .user-avatar {
     border-radius: 100%;
     margin: 5px;
     height: 80px; }
+
+@media screen and (max-width: 768px) {
+  .user-container .user-name {
+    font-size: 14px; }
+  .user-container .user-avatar {
+    height: 50px; } }

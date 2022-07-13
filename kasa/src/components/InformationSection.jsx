@@ -18,10 +18,17 @@ function InformationSection({
   return (
     <section className="information-container">
       <header className="information-header">
-        <InformationTitle title={title} location={location}></InformationTitle>
-        <UserInformation host={host}></UserInformation>
-        <Tags tags={tags}></Tags>
-        <Ratings rating={rating}></Ratings>
+        <div className="first-columns-information">
+          <InformationTitle
+            title={title}
+            location={location}
+          ></InformationTitle>
+          <Tags tags={tags}></Tags>
+        </div>
+        <div className="second-columns-information">
+          <UserInformation host={host}></UserInformation>
+          <Ratings rating={rating}></Ratings>
+        </div>
       </header>
       <section className="information-section">
         <Description description={description}></Description>

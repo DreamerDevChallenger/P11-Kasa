@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../assets/logo.svg";
 function Header() {
   return (
-    <header id="header-container">
+    <header className="header-container">
       <Logo></Logo>
       <nav>
         <ul>

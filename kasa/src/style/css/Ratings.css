@@ -1,19 +1,15 @@
 .rating-container {
-  position: relative;
-  width: 180px;
-  height: 30px;
-  order: 4;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-self: flex-end;
-  justify-content: flex-end;
-  z-index: 2; }
-  .rating-container:hover .rating-number {
-    opacity: 1; }
-  .rating-container .rating-block {
-    display: flex;
-    flex-direction: row;
-    width: 100%; }
+  flex-direction: row; }
+  .rating-container .rate-icon {
+    height: 30px; }
   .rating-container .rated path {
     fill: #ff6060; }
+
+@media screen and (min-width: 768px) {
+  .rating-container {
+    align-self: flex-end; } }
+
+@media screen and (max-width: 768px) {
+  .rating-container .rate-icon {
+    height: 20px; } }
