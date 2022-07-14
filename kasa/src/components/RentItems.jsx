@@ -9,7 +9,7 @@ function RentItems({ title, cover, id }) {
       <h2 className="rent-title">
         <Link
           to={
-            "/apartment/" +
+            "/P11-Kasa/apartment/" +
             id +
             "/" +
             title.toLowerCase().split(" ").join("-").split("---").join("-")

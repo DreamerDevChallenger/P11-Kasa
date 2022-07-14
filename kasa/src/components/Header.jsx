@@ -8,10 +8,10 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Acceuil</Link>
+            <Link to="/P11-Kasa/">Acceuil</Link>
           </li>
           <li>
-            <Link to="/about">A Propos</Link>
+            <Link to="/P11-Kasa/about">A Propos</Link>
           </li>
         </ul>
       </nav>

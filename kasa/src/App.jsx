@@ -19,14 +19,18 @@ function App() {
         <ScrollToTop>
           <Header></Header>
           <Navigation>
-            <Route exact path="/" element={<Home></Home>}></Route>
-            <Route exact path="/about" element={<About></About>}></Route>
+            <Route exact path="/P11-Kasa" element={<Home></Home>}></Route>
             <Route
               exact
-              path={"/apartment/:id/:name"}
+              path="/P11-Kasa/about"
+              element={<About></About>}
+            ></Route>
+            <Route
+              exact
+              path={"/P11-Kasa/apartment/:id/:name"}
               element={<CheckingId></CheckingId>}
             ></Route>
-            <Route path="*" element={<ErrorPage></ErrorPage>}></Route>
+            <Route path="/P11-Kasa/*" element={<ErrorPage></ErrorPage>}></Route>
           </Navigation>
           <Footer></Footer>
         </ScrollToTop>
