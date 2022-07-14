@@ -1,20 +1,69 @@
+@import "./Color.scss";
+
+@keyframes appearImage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
 .carrousel-container {
   position: relative;
   width: 100%;
-  overflow: hidden;
   height: 350px;
-  border-radius: 1.5em;
-  .carrousel-picture {
-    width: 100%;
-    height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  .picture {
     object-fit: cover;
-    object-position: center;
-  }
-  .carrousel-background {
-    position: absolute;
-    top: 0;
-    background-color: rgba($color: #000000, $alpha: 0.2);
     width: 100%;
     height: 100%;
+    animation-name: appearImage;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  .active-picture {
+    display: inline-block;
+  }
+  .inactive-picture {
+    display: none;
+  }
+  .carrousel-button-container {
+    display: flex;
+    padding: 0px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    .btn-slider {
+      background-color: inherit;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      svg {
+        width: 40px;
+        height: 40px;
+        &:hover {
+          path {
+            fill: $First-color;
+          }
+        }
+        path {
+          fill: white;
+          transition: 1s;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .carrousel-container {
+    height: 250px;
   }
 }

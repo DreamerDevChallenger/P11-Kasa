@@ -10,7 +10,6 @@ function Apartement() {
   const apartId = rentIdData.find((apart) => apart.id === id);
   const {
     title,
-    cover,
     description,
     host,
     rating,
@@ -22,7 +21,7 @@ function Apartement() {
 
   return (
     <main className="apartment-container">
-      <Carrousel cover={cover} title={title} pictures={pictures}></Carrousel>
+      <Carrousel pictures={pictures}></Carrousel>
       <InformationSection
         title={title}
         description={description}

@@ -1,17 +1,51 @@
+@keyframes appearImage {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 100%; } }
+
 .carrousel-container {
   position: relative;
   width: 100%;
-  overflow: hidden;
   height: 350px;
-  border-radius: 1.5em; }
-  .carrousel-container .carrousel-picture {
+  overflow: hidden;
+  border-radius: 20px; }
+  .carrousel-container .picture {
+    object-fit: cover;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center; }
-  .carrousel-container .carrousel-background {
+    animation-name: appearImage;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out; }
+  .carrousel-container .active-picture {
+    display: inline-block; }
+  .carrousel-container .inactive-picture {
+    display: none; }
+  .carrousel-container .carrousel-button-container {
+    display: flex;
+    padding: 0px 20px;
+    flex-direction: row;
+    justify-content: space-between;
     position: absolute;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
-    height: 100%; }
+    height: 50px;
+    top: 0;
+    bottom: 0;
+    margin: auto; }
+    .carrousel-container .carrousel-button-container .btn-slider {
+      background-color: inherit;
+      border: none;
+      padding: 0;
+      cursor: pointer; }
+      .carrousel-container .carrousel-button-container .btn-slider svg {
+        width: 40px;
+        height: 40px; }
+        .carrousel-container .carrousel-button-container .btn-slider svg:hover path {
+          fill: #ff6060; }
+        .carrousel-container .carrousel-button-container .btn-slider svg path {
+          fill: white;
+          transition: 1s; }
+
+@media screen and (max-width: 426px) {
+  .carrousel-container {
+    height: 250px; } }
