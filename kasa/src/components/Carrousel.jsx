@@ -2,9 +2,11 @@ import { useState } from "react";
 import "../style/css/Carrousel.css";
 import { ReactComponent as IconLeft } from "../assets/chevron-left-solid.svg";
 import { ReactComponent as IconRight } from "../assets/chevron-right-solid.svg";
+import { useEffect } from "react";
 
 function Carrousel({ pictures }) {
   const [currentImage, setCurrentImage] = useState(0);
+
   function previousSlide() {
     setCurrentImage(currentImage < 1 ? pictures.length - 1 : currentImage - 1);
   }
@@ -13,6 +15,18 @@ function Carrousel({ pictures }) {
       currentImage === pictures.length - 1 ? 0 : currentImage + 1
     );
   }
+  useEffect(() => {
+    function keyPress(e) {
+      if (e.keyCode === 37) {
+        previousSlide();
+      } else if (e.keyCode === 39) {
+        nextSlide();
+      }
+    }
+    window.addEventListener("keydown", keyPress);
+    return () => window.removeEventListener("keydown", keyPress);
+  });
+
   return (
     <div className="carrousel-container">
       {pictures.map((image, index) => (
