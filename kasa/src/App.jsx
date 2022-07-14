@@ -15,22 +15,18 @@ import CheckingId from "./utils/CheckingIfIdExists";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename="/P11-Kasa/">
         <ScrollToTop>
           <Header></Header>
           <Navigation>
-            <Route exact path="/P11-Kasa" element={<Home></Home>}></Route>
+            <Route exact path="/" element={<Home></Home>}></Route>
+            <Route exact path="/about" element={<About></About>}></Route>
             <Route
               exact
-              path="/P11-Kasa/about"
-              element={<About></About>}
-            ></Route>
-            <Route
-              exact
-              path={"/P11-Kasa/apartment/:id/:name"}
+              path={"apartment/:id/:name"}
               element={<CheckingId></CheckingId>}
             ></Route>
-            <Route path="/P11-Kasa/*" element={<ErrorPage></ErrorPage>}></Route>
+            <Route path="*" element={<ErrorPage></ErrorPage>}></Route>
           </Navigation>
           <Footer></Footer>
         </ScrollToTop>
