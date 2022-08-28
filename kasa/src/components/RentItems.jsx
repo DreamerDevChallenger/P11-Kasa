@@ -9,10 +9,27 @@ function RentItems({ title, cover, id }) {
       <h2 className="rent-title">
         <Link
           to={
-            "apartment/" +
+            "/apartment/" +
             id +
             "/" +
-            title.toLowerCase().split(" ").join("-").split("---").join("-")
+            title
+              .replace(/[ÀÁÂÃÄÅ]/g, "A")
+              .replace(/[àáâãäå]/g, "a")
+              .replace(/[ÈÉÊË]/g, "E")
+              .replace(/[èéêë]/g, "e")
+              .replace(/[Î]/g, "I")
+              .replace(/[î]/g, "i")
+              .replace(/[Ô]/g, "O")
+              .replace(/[ô]/g, "o")
+              .replace(/[Ù]/g, "U")
+              .replace(/[ù]/g, "u")
+              .replace(/[Ç]/g, "C")
+              .replace(/[ç]/g, "c")
+              .toLowerCase()
+              .split(" ")
+              .join("-")
+              .split("---")
+              .join("-")
           }
         >
           {title}

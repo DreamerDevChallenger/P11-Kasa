@@ -7,7 +7,7 @@ import "../style/css/Apartment.css";
 import data from "../__mocks__/data.json";
 
 function Apartement() {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const urlLocation = useLocation();
 
   const rentIdData = data;
@@ -24,18 +24,32 @@ function Apartement() {
     tags,
   } = apartId;
 
+  const correctUrl =
+    "/apartment/" +
+    id +
+    "/" +
+    title
+      .replace(/[ÀÁÂÃÄÅ]/g, "A")
+      .replace(/[àáâãäå]/g, "a")
+      .replace(/[ÈÉÊË]/g, "E")
+      .replace(/[èéêë]/g, "e")
+      .replace(/[Î]/g, "I")
+      .replace(/[î]/g, "i")
+      .replace(/[Ô]/g, "O")
+      .replace(/[ô]/g, "o")
+      .replace(/[Ù]/g, "U")
+      .replace(/[ù]/g, "u")
+      .replace(/[Ç]/g, "C")
+      .replace(/[ç]/g, "c")
+      .toLowerCase()
+      .split(" ")
+      .join("-")
+      .split("---")
+      .join("-");
+
   useEffect(() => {
-    if (
-      urlLocation.pathname !==
-      "/apartment/" +
-        id +
-        "/" +
-        title.toLowerCase().split(" ").join("-").split("---").join("-")
-    ) {
-      navigate(
-        "./../" +
-          title.toLowerCase().split(" ").join("-").split("---").join("-")
-      );
+    if (urlLocation.pathname !== correctUrl) {
+      navigate(correctUrl);
     }
   });
 

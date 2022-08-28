@@ -1,6 +1,5 @@
 {
   "name": "kasa",
-  "homepage": "https://devchalenger.github.io/P11-Kasa/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

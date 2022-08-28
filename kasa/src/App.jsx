@@ -15,7 +15,7 @@ import CheckingId from "./utils/CheckingIfIdExists";
 function App() {
   return (
     <div className="App">
-      <Router basename="/P11-Kasa/">
+      <Router>
         <ScrollToTop>
           <Header></Header>
           <Navigation>
@@ -23,7 +23,7 @@ function App() {
             <Route exact path="/about" element={<About></About>}></Route>
             <Route
               exact
-              path={"apartment/:id/:name"}
+              path={"/apartment/:id/:name"}
               element={<CheckingId></CheckingId>}
             ></Route>
             <Route path="*" element={<ErrorPage></ErrorPage>}></Route>
