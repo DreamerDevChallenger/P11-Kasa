@@ -3,8 +3,7 @@ import InformationTitle from "./InformationTitle";
 import Tags from "./Tags";
 import "../style/css/Information.css";
 import Ratings from "./Ratings";
-import Gear from "./Gear";
-import Description from "./Description";
+import Dropdown from "./Dropdown";
 
 function InformationSection({
   title,
@@ -31,8 +30,8 @@ function InformationSection({
         </div>
       </header>
       <section className="information-section">
-        <Description description={description}></Description>
-        <Gear equipments={equipments}></Gear>
+        <Dropdown title={"Description"} description={description}></Dropdown>
+        <Dropdown title={"Equipements"} equipments={equipments}></Dropdown>
       </section>
     </section>
   );

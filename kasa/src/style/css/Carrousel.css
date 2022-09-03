@@ -7,7 +7,7 @@
 .carrousel-container {
   position: relative;
   width: 100%;
-  height: 350px;
+  height: 400px;
   overflow: hidden;
   border-radius: 20px; }
   .carrousel-container .picture {
@@ -21,6 +21,16 @@
     display: inline-block; }
   .carrousel-container .inactive-picture {
     display: none; }
+  .carrousel-container .current-slide-block {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    color: white;
+    bottom: 0;
+    right: 50%;
+    left: 50%;
+    font-size: 18px;
+    z-index: 1; }
   .carrousel-container .carrousel-button-container {
     display: flex;
     padding: 0px 20px;

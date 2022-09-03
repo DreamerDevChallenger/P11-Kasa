@@ -1,4 +1,4 @@
-import BannerAbout from "../components/BannerAbout";
+import Banner from "../components/Banner";
 import DropdownAboutSection from "../components/DropdownAboutSection";
 
 import "../style/css/About.css";
@@ -6,7 +6,7 @@ import "../style/css/About.css";
 function About() {
   return (
     <main className="about-container">
-      <BannerAbout></BannerAbout>
+      <Banner Home={false}></Banner>
       <DropdownAboutSection></DropdownAboutSection>
     </main>
   );

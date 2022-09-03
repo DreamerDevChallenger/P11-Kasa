@@ -7,19 +7,20 @@
   justify-content: space-between;
   align-items: center;
   nav {
-    width: 200px;
+    width: 250px;
     margin-left: 10px;
     ul {
       padding: 0;
       list-style: none;
+      width: 100%;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: flex-end;
+      justify-content: space-between;
       li {
         font-size: 20px;
         color: $First-color;
-        margin: auto;
+        margin: auto 10px;
 
         &:visited,
         &:hover {
@@ -40,6 +41,7 @@
     nav {
       width: 150px;
       ul {
+        justify-content: flex-end;
         li {
           font-size: 15px;
           margin-right: 0;

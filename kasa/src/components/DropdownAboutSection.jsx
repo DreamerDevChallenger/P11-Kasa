@@ -1,4 +1,4 @@
-import DropdownAbout from "./DropdownAbout";
+import Dropdown from "./Dropdown";
 import dataAbout from "../__mocks__/aboutData.json";
 
 function DropdownAboutSection() {
@@ -6,12 +6,13 @@ function DropdownAboutSection() {
   return (
     <section className="dropdown-section">
       {data.map((about) => (
-        <DropdownAbout
+        <Dropdown
           title={about.title}
           description={about.description}
           id={about.id}
           key={about.id}
-        ></DropdownAbout>
+          isAbout={true}
+        ></Dropdown>
       ))}
     </section>
   );

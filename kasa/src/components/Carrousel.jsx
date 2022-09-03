@@ -7,6 +7,8 @@ import { useEffect } from "react";
 function Carrousel({ pictures }) {
   const [currentImage, setCurrentImage] = useState(0);
 
+  console.log();
+
   function previousSlide() {
     setCurrentImage(currentImage < 1 ? pictures.length - 1 : currentImage - 1);
   }
@@ -49,7 +51,11 @@ function Carrousel({ pictures }) {
           <IconRight></IconRight>
         </button>
       </div>
-      <div className="carrousel-background"></div>
+      <div className="current-slide-block">
+        <p className="current-slide">
+          {currentImage + 1}/{pictures.length}
+        </p>
+      </div>
     </div>
   );
 }
